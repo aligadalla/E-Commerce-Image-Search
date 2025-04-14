@@ -43,7 +43,8 @@ export default function Search() {
 
       localStorage.setItem("imageSearchResults", JSON.stringify(searchResults));
 
-      router.push("/search?type=image");
+      const randomInt = Math.floor(Math.random() * 10);
+      router.push(`/search?type=${randomInt}`);
     } catch (error) {
       console.error("Error searching with image:", error);
     } finally {
